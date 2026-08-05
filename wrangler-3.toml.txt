@@ -1,0 +1,18 @@
+name = "teammarysy-bot"
+main = "index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+OWNER_ID = "REPLACE_WITH_YOUR_TELEGRAM_USER_ID"
+BOT_USERNAME = "TeamMarySyBot"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[triggers]
+crons = ["*/15 * * * *"]
+
+# Secrets (set via CLI, not stored here):
+#   npx wrangler secret put TG_BOT_TOKEN
+#   npx wrangler secret put TG_BOT_SECRET_TOKEN
